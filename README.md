@@ -95,6 +95,25 @@ Built on Convex's reactive database, the platform provides:
 - Intuitive navigation with tabbed interface
 - Advanced filtering and search capabilities
 
+## Deploying to Render
+
+You can deploy this application to Render.
+
+1.  Fork this repository.
+2.  Create a new **Static Site** on Render and connect your GitHub account.
+3.  Authorize Render to access your forked repository.
+4.  Use the following settings during creation:
+    *   **Build Command**: `npm run build`
+    *   **Publish Directory**: `dist`
+5.  Before the first build, add your Convex environment variables as an **Environment Group**. Name it something like `convex-secrets`, and add these keys:
+    *   `CONVEX_DEPLOYMENT`
+    *   `VITE_CONVEX_URL`
+    *   `CONVEX_DEPLOY_KEY` (mark this as a secret)
+6.  Attach the environment group to your new static site.
+7.  Trigger a manual deploy.
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/roypushpak/talent-matching-mvp)
+
 ## Contributing
 
 1. Fork the repository
